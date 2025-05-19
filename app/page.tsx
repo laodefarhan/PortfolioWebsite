@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/sections/hero";
 import { ResumeSection } from "@/components/sections/resume";
 import { ServicesSection } from "@/components/sections/services";
 
-export default function () {
+export default function HomePage() {
   return (
     <main className="bg-gray-900 text-white overflow-hidden">
       <Navbar />
