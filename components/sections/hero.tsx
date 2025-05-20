@@ -65,9 +65,9 @@ export function HeroSection() {
                             <span className="animate-blink">|</span>
                         </h1>
                         <p className="text-xl text-gray-400 mb-8">
-                            a software developer who is skilled in both front-end and back-end development.
-                            They can handle the entire development lifecycle, from designing the user interface
-                            to building the server-side logic and managing databases.
+                            A full stack developer is a software developer who is able to work on both sides of
+                            web development. front-end the client side, which is visible to the user
+                            and back-end the server side, which handles logic and databases.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
                             {socialLinks.map((social, index) => (
