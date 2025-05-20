@@ -52,7 +52,7 @@ export function HeroSection() {
     return (
         <section id="home" className="min-h-screen flex items-center pt-20 pb-10">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-center gap-10">
+                <div className="flex flex-col-reverse sm:flex-col-reverse lg:flex-row items-center gap-10">
                     <motion.div
                         className="lg:w-1/2 text-center lg:text-left"
                         initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export function HeroSection() {
                         </motion.div>
                     </motion.div>
                     <motion.div
-                        className="lg:w-1/2 relative"
+                        className="lg:w-1/2 relative mb-8 lg:mb-0"
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
