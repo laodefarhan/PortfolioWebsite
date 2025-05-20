@@ -17,7 +17,7 @@ export function HeroSection() {
     const [typedText, setTypedText] = useState('');
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const words = ['Full Stack Developer'];
+    const words = ['Full Stack Developer', 'Freelancer'];
     const typingSpeed = 100;
     const deletingSpeed = 50;
     const pauseTime = 1000;
@@ -59,7 +59,7 @@ export function HeroSection() {
                         transition={{ duration: 0.5 }}
                     >
                         <h1 className="text-4xl lg:text-4xl font-bold mb-4">
-                            Hi, I'm <span className="text-blue-500">Laode F. Fadilah</span>,
+                            Hi, Im <span className="text-blue-500">Laode F. Fadilah</span>,
                             <br />a <span className="text-blue-500">{typedText}</span>
                             <span className="animate-blink">|</span>
                         </h1>

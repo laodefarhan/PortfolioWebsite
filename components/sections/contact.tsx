@@ -53,7 +53,7 @@ export function ContactSection() {
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact Me</h2>
                     <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Have a project in mind or want to collaborate? I'd love to hear from you.
+                        Have a project in mind or want to collaborate? Id love to hear from you.
                         Feel free to reach out through the form below or my contact information.
                     </p>
                 </motion.div>

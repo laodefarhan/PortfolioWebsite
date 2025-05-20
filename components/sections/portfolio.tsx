@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 
 const categories = ['All', 'Web', 'Mobile', 'Design', 'Branding'];
