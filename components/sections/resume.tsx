@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { title } from 'process';
 import { ExternalLink, Github } from 'lucide-react';
 
 const education = [
@@ -100,14 +99,9 @@ const certificate = [
 ]
 
 export function ResumeSection() {
-    const [activeTab, setActiveTab] = useState('education');
-
-    const [selectedCategory, setSelectedCategory] = useState('All');
     const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
-    const filteredProjects = selectedCategory === 'All'
-        ? projects
-        : projects.filter(project => project.category === selectedCategory);
+    const filteredProjects = projects;
 
     return (
         <section id="resume" className="py-20 bg-gray-900">
@@ -130,7 +124,6 @@ export function ResumeSection() {
                 <Tabs
                     defaultValue="education"
                     className="w-full"
-                    onValueChange={setActiveTab}
                 >
                     <TabsList className="grid grid-cols-5 gap-1 w-full max-w-md mx-auto mb-10 bg-blue-500">
                         <TabsTrigger value="education">Education</TabsTrigger>

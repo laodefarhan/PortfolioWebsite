@@ -60,7 +60,7 @@ export function HeroSection() {
                         transition={{ duration: 0.5 }}
                     >
                         <h1 className="text-4xl lg:text-4xl font-bold mb-4">
-                            Hi, I'm <span className="text-blue-500">Laode F. Fadilah</span>,<br />
+                            Hi, Im <span className="text-blue-500">Laode F. Fadilah</span>,<br />
                             a <span className="text-blue-500">{typedText}</span>
                             <span className="animate-blink">|</span>
                         </h1>
