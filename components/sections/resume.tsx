@@ -79,7 +79,7 @@ const projects = [
 
 const certificate = [
     {
-        image: '/assets/certificates/Certificates-Kampus-Merdeka.jpg',
+        image: '/assets/certificates/Certificates-Classical-Cryptography-for-Beginner-Course.jpg',
         degree: 'Kampus Merdeka',
         institution: 'Teknologi Informasi Institut Shanti Bhuana',
         period: 'May 06, 2023',
