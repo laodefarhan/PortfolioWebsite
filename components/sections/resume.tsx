@@ -66,7 +66,6 @@ const projects = [
         link: '#',
         github: '#',
     },
-
     {
         id: 2,
         title: 'Online Store',
@@ -80,21 +79,30 @@ const projects = [
 
 const certificate = [
     {
-        image: '/assets/certificates/certificates-kampus-merdeka.jpg',
+        image: '/assets/certificates/Certificates-Kampus-Merdeka.jpg',
         degree: 'Kampus Merdeka',
         institution: 'Teknologi Informasi Institut Shanti Bhuana',
         period: 'May 06, 2023',
         description: 'Peran Teknologi Artificial Intelligence Untuk Menunjang Pekerjaan',
-        pdfUrl: '/assets/certificates/certificates-kampus-merdeka.pdf',
+        pdfUrl: '/assets/pdf/Laode Farhan Fadilah.pdf',
     },
 
     {
-        image: '/assets/certificates/certificates-cyber-academy-indonesia.jpg',
+        image: '/assets/certificates/Certificates-Introduction-to-Information-Security-Course.jpg',
         degree: 'Cyber Academy',
         institution: 'Cyber Academy Indonesia',
         period: 'May 04, 2025',
         description: 'Introduction to Information Security Course',
-        pdfUrl: '/assets/certificates/certificates-cyber-academy-indonesia.pdf',
+        pdfUrl: '/assets/pdf/Certificate-of-Completion-Introduction-to-Information-Security.pdf',
+    },
+
+    {
+        image: '/assets/certificates/Certificates-Classical-Cryptography-for-Beginner-Course.jpg',
+        degree: 'Cyber Academy',
+        institution: 'Cyber Academy Indonesia',
+        period: 'May 22, 2025',
+        description: 'Classical Cryptography for Beginner Course',
+        pdfUrl: '/assets/pdf/Certificate-of-Completion-Classical-Cryptography-for-Beginner.pdf',
     }
 ]
 
