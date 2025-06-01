@@ -2,15 +2,15 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
-import { WhatsAppIcon, InstagramIcon, TikTokIcon, GitHubIcon } from '@/components/icons';
+import { InstagramIcon, TikTokIcon, GitHubIcon, Linkedin } from '@/components/icons';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const socialLinks = [
-    { icon: WhatsAppIcon, href: 'https://wa.me/yourNumber', label: 'WhatsApp' },
     { icon: InstagramIcon, href: 'https://instagram.com/laodefarhan_', label: 'Instagram' },
     { icon: TikTokIcon, href: 'https://tiktok.com/@l.f.fadilah_', label: 'TikTok' },
     { icon: GitHubIcon, href: 'https://github.com/laodefarhan', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/laodefarhan/', label: 'Linkedin' },
 ];
 
 export function HeroSection() {
