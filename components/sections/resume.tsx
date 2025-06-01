@@ -150,6 +150,14 @@ const certificate = [
 
 export function ResumeSection() {
     const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+    const [showAlert, setShowAlert] = useState(false);
+
+    const handleVisitClick = () => {
+        setShowAlert(true);
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 3000); // alert hilang setelah 3 detik
+    };
 
     const filteredProjects = projects;
 
@@ -403,17 +411,25 @@ export function ResumeSection() {
                                                 {/* Description */}
                                                 <p className="text-gray-400 mb-4">{item.description}</p>
 
-                                                {/* Visit Button */}
-                                                {item.pdfUrl && (
-                                                    <a
-                                                        href={item.pdfUrl}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition"
+                                                <div>
+                                                    {/* Fixed alert */}
+                                                    {showAlert && (
+                                                        <div className="fixed top-5 right-5 z-50 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg shadow-md w-[320px]">
+                                                            <strong className="font-bold">Hak Akses Anda Dibatasi!</strong>
+                                                            <span className="block text-sm mt-1">
+                                                                Anda tidak dapat melihat certificate tanpa izin dari developer Laode F. Fadilah.
+                                                            </span>
+                                                        </div>
+                                                    )}
+
+                                                    {/* Button Visit */}
+                                                    <button
+                                                        onClick={handleVisitClick}
+                                                        className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition"
                                                     >
                                                         Visit
-                                                    </a>
-                                                )}
+                                                    </button>
+                                                </div>
                                             </CardContent>
                                         </Card>
                                     </motion.div>
