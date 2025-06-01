@@ -94,7 +94,7 @@ const skills = [
     },
     {
         image: '/assets/skills/mysql.png',
-        name: 'MysSQL',
+        name: 'MySQL',
     },
 ];
 
@@ -369,7 +369,7 @@ export function ResumeSection() {
                         </AnimatePresence>
                     </TabsContent>
 
-                    <TabsContent value="certificate">
+                    <TabsContent value="certificates">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key="certificate"
