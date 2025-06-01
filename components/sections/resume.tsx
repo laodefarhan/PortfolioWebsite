@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
 import { ExternalLink, Github } from 'lucide-react';
 
 const education = [
@@ -45,15 +44,58 @@ const experience = [
 ];
 
 const skills = [
-    { name: 'HTML/CSS', level: 95 },
-    { name: 'JavaScript', level: 50 },
-    { name: 'PHP', level: 70 },
-    { name: 'Bootstrap/TailwindCSS', level: 95 },
-    { name: 'Laravel', level: 85 },
-    { name: 'React/Next.js', level: 50 },
-    { name: 'Material UI', level: 95 },
-    { name: 'MySQL', level: 70 },
-    { name: 'Git', level: 70 },
+    {
+        image: '/assets/skills/html.png',
+        name: 'HTML',
+    },
+    {
+        image: '/assets/skills/css.png',
+        name: 'CSS',
+    },
+    {
+        image: '/assets/skills/javascript.png',
+        name: 'JavaScript',
+    },
+    {
+        image: '/assets/skills/php.png',
+        name: 'PHP',
+    },
+    {
+        image: '/assets/skills/react.png',
+        name: 'React',
+    },
+    {
+        image: '/assets/skills/next js.png',
+        name: 'Next JS',
+    },
+    {
+        image: '/assets/skills/laravel.png',
+        name: 'Laravel',
+    },
+    {
+        image: '/assets/skills/tailwindcss.png',
+        name: 'TailwindCSS',
+    },
+    {
+        image: '/assets/skills/bootstrap.png',
+        name: 'Bootstrap',
+    },
+    {
+        image: '/assets/skills/daisyui.png',
+        name: 'Daisy UI',
+    },
+    {
+        image: '/assets/skills/material ui.png',
+        name: 'Material UI',
+    },
+    {
+        image: '/assets/skills/git.png',
+        name: 'GIT',
+    },
+    {
+        image: '/assets/skills/mysql.png',
+        name: 'MysSQL',
+    },
 ];
 
 const projects = [
@@ -223,7 +265,7 @@ export function ResumeSection() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.5 }}
-                                className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1"
                             >
                                 {skills.map((skill, index) => (
                                     <motion.div
@@ -231,18 +273,24 @@ export function ResumeSection() {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: index * 0.05 }}
-                                        className="mb-6"
+                                        className="flex flex-col items-center"
                                     >
-                                        <div className="flex justify-between mb-2">
-                                            <h3 className="font-medium">{skill.name}</h3>
-                                            <span className="text-blue-400">{skill.level}%</span>
+                                        <div className="w-28 h-28 mb-4 relative bg-gray-800 rounded-lg flex flex-col items-center justify-center">
+                                            <Image
+                                                src={skill.image}
+                                                alt={skill.name}
+                                                width={52}
+                                                height={52}
+                                                className="object-contain mb-2"
+                                            />
+                                            <p className="text-white text-sm text-center">{skill.name}</p>
                                         </div>
-                                        <Progress value={skill.level} className="h-2" />
                                     </motion.div>
                                 ))}
                             </motion.div>
                         </AnimatePresence>
                     </TabsContent>
+
 
                     <TabsContent value="projects">
                         <AnimatePresence mode="wait">
