@@ -369,7 +369,7 @@ export function ResumeSection() {
                         </AnimatePresence>
                     </TabsContent>
 
-                    <TabsContent value="certificates">
+                    <TabsContent value="certificate">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key="certificate"
