@@ -10,7 +10,7 @@ const socialLinks = [
     { icon: InstagramIcon, href: 'https://instagram.com/laodefarhan_', label: 'Instagram' },
     { icon: TikTokIcon, href: 'https://tiktok.com/@l.f.fadilah_', label: 'TikTok' },
     { icon: GitHubIcon, href: 'https://github.com/laodefarhan', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/laodefarhan/', label: 'Linkedin' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/laode-farhan-fadilah-195a35368', label: 'Linkedin' },
 ];
 
 export function HeroSection() {

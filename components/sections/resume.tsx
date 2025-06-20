@@ -121,30 +121,50 @@ const projects = [
 
 const certificate = [
     {
-        image: '/assets/certificates/Certificates-Kampus-Merdeka.jpg',
+        image: '/assets/certificates/Laode   Farhan Fadilah_page-0001.jpg',
         degree: 'Kampus Merdeka',
         institution: 'Teknologi Informasi Institut Shanti Bhuana',
         period: 'May 06, 2023',
         description: 'Peran Teknologi Artificial Intelligence Untuk Menunjang Pekerjaan',
-        pdfUrl: '/assets/pdf/Laode Farhan Fadilah.pdf',
     },
 
     {
-        image: '/assets/certificates/Certificates-Introduction-to-Information-Security-Course.jpg',
+        image: '/assets/certificates/Certificate-of-Completion-Introduction-to-Information-Security_page-0001.jpg',
         degree: 'Cyber Academy',
         institution: 'Cyber Academy Indonesia',
         period: 'May 04, 2025',
         description: 'Introduction to Information Security Course',
-        pdfUrl: '/assets/pdf/Certificate-of-Completion-Introduction-to-Information-Security.pdf',
     },
 
     {
-        image: '/assets/certificates/Certificates-Classical-Cryptography-for-Beginner-Course.jpg',
+        image: '/assets/certificates/Certificate-of-Completion-Classical-Cryptography-for-Beginner_page-0001.jpg',
         degree: 'Cyber Academy',
         institution: 'Cyber Academy Indonesia',
         period: 'May 22, 2025',
         description: 'Classical Cryptography for Beginner Course',
-        pdfUrl: '/assets/pdf/Certificate-of-Completion-Classical-Cryptography-for-Beginner.pdf',
+    },
+
+    {
+        image: '/assets/certificates/sertifikat_course_123_5018543_140625225600_page-0001.jpg',
+        degree: 'Dicoding Indonesia',
+        institution: 'Dicoding Indonesia',
+        period: 'Jun 14, 2025',
+        description: 'Belajar Dasar Pemrograman Web',
+    },
+
+    {
+        image: '/assets/certificates/frontend_developer_react certificate_page-0001.jpg',
+        degree: 'HackerRank',
+        institution: 'HackerRank',
+        period: 'Jun 15, 2025',
+        description: 'Frontend Developer (React)',
+    },
+
+    {
+        degree: 'FreeCodeCamp',
+        institution: 'FreeCodeCamp',
+        period: 'Jun 20, 2025',
+        description: 'Responsive Web Design',
     }
 ]
 
@@ -377,7 +397,7 @@ export function ResumeSection() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.5 }}
-                                className="space-y-6"
+                                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                             >
                                 {certificate.map((item, index) => (
                                     <motion.div
@@ -385,34 +405,35 @@ export function ResumeSection() {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
+                                        className="h-full"
                                     >
-                                        <Card className="bg-gray-800 border-none">
-                                            <CardContent className="p-6">
-                                                {/* Optional Image */}
-                                                {item.image && (
-                                                    <img
-                                                        src={item.image}
-                                                        alt={item.degree}
-                                                        className="mb-4 rounded-md w-full h-auto"
-                                                    />
-                                                )}
+                                        <Card className="bg-gray-800 border-none h-full">
+                                            <CardContent className="p-6 flex flex-col h-full">
+                                                <div className="flex-1">
+                                                    {item.image && (
+                                                        <img
+                                                            src={item.image}
+                                                            alt={item.degree}
+                                                            className="mb-4 rounded-md w-full h-auto"
+                                                        />
+                                                    )}
 
-                                                {/* Header and Badge */}
-                                                <div className="flex flex-col md:flex-row md:items-start justify-between mb-4">
-                                                    <div>
+                                                    <div className="relative mb-4"> {/* Parent wajib relative */}
+                                                        {/* Tanggal di pojok kanan atas */}
+                                                        <div className="absolute right-0 top-0 bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                                            {item.period}
+                                                        </div>
+
+                                                        {/* Konten utama */}
                                                         <h3 className="text-xl font-semibold text-white">{item.degree}</h3>
-                                                        <p className="text-blue-400 text-sm">{item.institution}</p>
+                                                        <p className="text-blue-400 text-sm mt-4">{item.institution}</p>
                                                     </div>
-                                                    <div className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 inline-block">
-                                                        {item.period}
-                                                    </div>
+
+                                                    <p className="text-gray-400 mb-4">{item.description}</p>
                                                 </div>
 
-                                                {/* Description */}
-                                                <p className="text-gray-400 mb-4">{item.description}</p>
-
+                                                {/* Bagian bawah: tombol visit dan alert */}
                                                 <div>
-                                                    {/* Fixed alert */}
                                                     {showAlert && (
                                                         <div className="fixed top-5 right-5 z-50 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg shadow-md w-[320px]">
                                                             <strong className="font-bold">Hak Akses Anda Dibatasi!</strong>
@@ -421,8 +442,6 @@ export function ResumeSection() {
                                                             </span>
                                                         </div>
                                                     )}
-
-                                                    {/* Button Visit */}
                                                     <button
                                                         onClick={handleVisitClick}
                                                         className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition"

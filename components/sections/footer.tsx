@@ -104,7 +104,7 @@ export function Footer() {
 
                             {/* Follow My Linkedin */}
                             <a
-                                href="https://www.linkedin.com/in/laodefarhan/"
+                                href="https://www.linkedin.com/in/laode-farhan-fadilah-195a35368"
                                 className="bg-gray-800 hover:bg-blue-600 transition-colors duration-300 w-10 h-10 rounded-full flex items-center justify-center"
                             >
                                 <svg
